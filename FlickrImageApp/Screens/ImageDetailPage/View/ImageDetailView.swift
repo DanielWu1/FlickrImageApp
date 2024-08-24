@@ -53,7 +53,10 @@ extension ImageDetailView: View{
             
             Text("Published: \(state.formattedDate)")
                 .padding(.bottom, C.ImageDetailPageInfo.textPadding)
-            
+//            GeometryReader { geometry in
+//                WebView(htmlContent: state.description)
+//                    .frame(width: geometry.size.width, height: geometry.size.height)
+//            }
             WebView(htmlContent: state.description)
                 .frame(height: C.ImageDetailPageInfo.webViewHeight)
                 .padding()

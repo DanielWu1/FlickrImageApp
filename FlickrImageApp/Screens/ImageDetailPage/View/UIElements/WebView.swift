@@ -20,6 +20,24 @@ struct WebView: UIViewRepresentable {
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
-        webView.loadHTMLString(htmlContent, baseURL: nil)
-    }
+            let responsiveHTML = """
+            <html>
+            <head>
+            <style>
+            body {
+                font-size: 25px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            </style>
+            </head>
+            <body>\(htmlContent)</body>
+            </html>
+            """
+            webView.loadHTMLString(responsiveHTML, baseURL: nil)
+        }
 }
