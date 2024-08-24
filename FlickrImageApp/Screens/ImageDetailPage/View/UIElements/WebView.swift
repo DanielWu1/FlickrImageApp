@@ -13,9 +13,6 @@ struct WebView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.contentMode = .scaleAspectFill
-        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return webView
     }
     
